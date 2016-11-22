@@ -1,0 +1,17 @@
+{
+  "name": "birds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.4.7",
+    "electron-config": "^0.2.1",
+    "three": "^0.82.1",
+    "three-orbit-controls": "^72.0.0"
+  }
+}
