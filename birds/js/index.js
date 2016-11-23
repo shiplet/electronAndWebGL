@@ -1,5 +1,4 @@
 const THREE = require('three')
-const GPUComputationRenderer = require('../../lib/GPUComputationRenderer')
 
 var hash = document.location.hash.substr( 1 );
 if (hash) hash = parseInt(hash, 0);
