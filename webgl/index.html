@@ -5,18 +5,23 @@
 </head>
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 <script id="vertexShader" type="notjs">
-    attribute vec4 a_position;
+    attribute vec2 a_position;
+    uniform vec2 u_resolution;
 
     void main() {
-        gl_Position = a_position;
+        vec2 zeroToOne = a_position / u_resolution;
+        vec2 zeroToTwo = zeroToOne * 2.0;
+        vec2 clipSpace = zeroToTwo - 1.0;
+        gl_Position = vec4(clipSpace, 0, 1);
     }
 </script>
 <script id="fragmentShader" type="notjs">
     precision mediump float;
 
     void main() {
-        gl_FragColor = vec4(1, 0, 0.5, 1);
+        gl_FragColor = vec4(1, 0.7, 0.5, 1);
     }
+
 </script>
 <body>
     <script type="text/javascript">
