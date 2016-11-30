@@ -32,7 +32,7 @@ function init() {
     scene.add(ambientLight)
 
     pointLight = new THREE.PointLight(colors.hazel, 10, 50, 5)
-    pointLight.add( new THREE.Mesh(sphere, new THREE.MeshPhongMaterial({color:colors.hazel, metal: true, wraparound: true})) )
+    // pointLight.add( new THREE.Mesh(sphere, new THREE.MeshPhongMaterial({color:colors.hazel, metal: true, wraparound: true})) )
     pointLight.position.z = 20
     pointLight.position.y = 45
     scene.add(pointLight)
@@ -58,7 +58,7 @@ function init() {
     })
 
     let loader = new THREE.FontLoader()
-    loader.load('font/Aprille_Regular.json', (font)=>{
+    loader.load('font/Appareo.json', (font)=>{
 
         geometry = new THREE.TextGeometry('Coming Soon', {
             font: font,
@@ -72,7 +72,7 @@ function init() {
 
         box = new THREE.Box3().setFromObject(mesh)
         mesh.position.x = -(box.getSize().x / 2)
-        pointLight.position.x = -(box.getSize().x / 6.75)
+        pointLight.position.x = -(box.getSize().x / 8)
         pointLight2.position.x = -(box.getSize().x / 6.75) * position
         pointLight3.position.x = -500
 
